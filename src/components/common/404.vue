@@ -1,0 +1,77 @@
+<style>
+    body {
+        background-color: #fff;
+    }
+    .wrap {
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    /*background: url("../../images/404.jpg") no-repeat center top 150px;*/
+    }
+    .shine {
+        position: relative;
+        top: 450px;
+        text-align: center;
+        font-size: 2.2em;
+        background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+        -webkit-background-size: 125px;
+        color: rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: text;
+        -webkit-animation-name: shine;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        clear: both;
+    }
+
+    @-webkit-keyframes shine {
+        0% {
+            background-position: top left;
+        }
+        100% {
+            background-position: top right;
+        }
+    }
+
+    .go-back {
+        display: block;
+        position: relative;
+        top: 500px;
+        font-size: 16px;
+        width: 120px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #dedede;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+</style>
+<template>
+    <div class="wrap">
+        <p class="shine">呃，一溜烟不知道开到哪儿去了</p>
+        <p class="go-back" @click="goBack">返回上一页</p>
+    </div>
+</template>
+
+
+
+<script>
+    export default{
+        data(){
+            return {
+                msg: 'hello vue'
+            }
+        },
+        methods: {
+            goBack() {
+                window.history.go(-1)
+            }
+        },
+        components: {}
+    }
+</script>
