@@ -5,7 +5,7 @@ let util = {
 
 };
 util.title = function(title) {
-    title = title ? title + ' - Home' : 'iView project';
+    title = title ? title + ' - 云鹿控制台' : '云鹿控制台';
     window.document.title = title;
 };
 
