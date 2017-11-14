@@ -10,6 +10,7 @@
     color: @text-color;
     font-size: @font-size-base;
     position: relative;
+    z-index: @zindex-select;
 
     &-horizontal{
         height: 60px;
@@ -49,7 +50,7 @@
         background: #fff;
     }
     &-dark{
-        background: @title-color;
+        background: @menu-dark-title;
     }
     &-primary{
         background: @primary-color;
@@ -95,7 +96,7 @@
     }
 
     &-dark&-horizontal &-item, &-dark&-horizontal &-submenu{
-        color: @subsidiary-color;
+        color: @menu-dark-subsidiary-color;
         &-active, &:hover{
             color: #fff;
         }
@@ -176,7 +177,7 @@
     }
     &-dark&-vertical &-item-group{
         &-title{
-            color: @text-color;
+            color: @menu-dark-group-title-color;
         }
     }
 
@@ -190,7 +191,7 @@
     }
 
     &-dark&-vertical &-item, &-dark&-vertical &-submenu-title{
-        color: @subsidiary-color;
+        color: @menu-dark-subsidiary-color;
         &-active:not(.@{menu-prefix-cls}-submenu),
         &-active:not(.@{menu-prefix-cls}-submenu):hover
         {
@@ -198,7 +199,7 @@
         }
         &:hover{
             color: #fff;
-            background: @title-color;
+            background: @menu-dark-title;
         }
         &-active:not(.@{menu-prefix-cls}-submenu){
             color: @primary-color;
@@ -223,7 +224,7 @@
     &-dark&-vertical &-opened{
         background: @menu-dark-active-bg;
         .@{menu-prefix-cls}-submenu-title{
-            background: @title-color;
+            background: @menu-dark-title;
         }
     }
 }
